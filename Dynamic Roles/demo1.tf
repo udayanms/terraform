@@ -8,10 +8,10 @@ terraform {
 }
 
 provider "aws" {
-  # Configuration options
+  # Credentails  are provided via environment variables for security. 
 }
 
-data "aws_iam_roles" "roles" {}
+#data "aws_iam_roles" "roles" {}
 
 locals {
 
