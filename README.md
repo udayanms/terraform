@@ -1,0 +1,1 @@
+# Terraform Tricks and patterns
