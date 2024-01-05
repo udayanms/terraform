@@ -37,7 +37,7 @@ module policies {
 	for_each 	= toset(local.policies_list)
 	source 		= "./mod_policy"
 	name 		= each.key
-	description = local.policies[each.key].description
+	description     = local.policies[each.key].description
 	policyjson 	= "${path.module}/policies/${local.policies[each.key].policyjson}"
 }
 
@@ -45,9 +45,9 @@ module roles {
 	for_each 	= toset(local.role_list)
 	source 		= "./mod_role"
 	name 		= each.key
-	description = local.roles_def[each.key].description
+	description     = local.roles_def[each.key].description
 	policies 	= flatten(local.roles_def[each.key].policies)
-	depends_on  = [ module.policies ]
+	depends_on      = [ module.policies ]
 }
 
 output roles {
