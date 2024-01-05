@@ -1,14 +1,14 @@
 # Terraform Tricks and patterns
 ## Objective:
-### Objective of this excercise is to build a pattern which would allow dynamically selecting and deploying iam roles from the set of possible roles. 
-### Usually each role and its respective policies are deployed as single resource however this pattern would save a lot of work and space in the code base. 
+#### Objective of this excercise is to build a pattern which would allow dynamically selecting and deploying iam roles from the set of possible roles. 
+#### Usually each role and its respective policies are deployed as single resource however this pattern would save a lot of work and space in the code base. 
 ### 
 ## Benefits:
-###   * Reduce code
-###   * Allow dynamic selection
+####   * Reduce code
+####   * Allow dynamic selection
 
 ## Imp:
-### For_each was used instead of count to prevent drop and create if the position/order of role name is changed 
+#### For_each was used instead of count to prevent drop and create if the position/order of role name is changed 
 ```
 D:\dc\terraform\demo1>terraform init
 
