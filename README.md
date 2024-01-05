@@ -1,5 +1,5 @@
 # Terraform Tricks and patterns
-'''
+```
 D:\dc\terraform\demo1>terraform apply
 data.aws_iam_roles.roles: Reading...
 module.policies["policy21"].aws_iam_policy.policy: Refreshing state... [id=arn:aws:iam::251963606983:policy/policy21]
@@ -163,4 +163,4 @@ roles = {
   }
 }
 
-'''
+```
