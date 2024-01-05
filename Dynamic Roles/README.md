@@ -9,6 +9,9 @@
 
 ## Imp:
 #### For_each was used instead of count to prevent drop and create if the position/order of role name is changed 
+
+## Output
+### Terraform init
 ```
 D:\dc\terraform\demo1>terraform init
 
@@ -28,7 +31,10 @@ should now work.
 If you ever set or change modules or backend configuration for Terraform,
 rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
+```
 
+### Terraform Plan
+```
 D:\dc\terraform\demo1>terraform plan
 data.aws_iam_roles.roles: Reading...
 module.policies["policy21"].aws_iam_policy.policy: Refreshing state... [id=arn:aws:iam::251xxxxxxx983:policy/policy21]
@@ -127,7 +133,10 @@ You can apply this plan to save these new output values to the Terraform state, 
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
 Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if you run "terraform apply" now.
+```
 
+### Terraform Apply
+```
 D:\dc\terraform\demo1>terraform apply
 data.aws_iam_roles.roles: Reading...
 module.policies["policy21"].aws_iam_policy.policy: Refreshing state... [id=arn:aws:iam::251xxxxxxx983:policy/policy21]
