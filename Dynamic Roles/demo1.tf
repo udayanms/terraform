@@ -14,18 +14,19 @@ provider "aws" {
 #data "aws_iam_roles" "roles" {}
 
 locals {
-
+	# selected List of roles which are to tbe implement.
 	role_list = ["role1","role2" ]
-	#role_list = []
-	
+
 	roles_def = {
 		role1 = { description = "role1 description", policies = ["policy1"] },
 		role2 = { description = "role2 description", policies = ["policy21","policy22"] }
+		role3 = { description = "role3 description", policies = ["policy3"] },
 	}
 	policies = {
 		policy1   = { description = "Policy 1 description",  policyjson = "policy1.json"},
 		policy21  = { description = "Policy 21 description", policyjson = "policy21.json"},
 		policy22  = { description = "Policy 22 description", policyjson = "policy22.json"}
+		policy3   = { description = "Policy 3 description", policyjson = "policy3.json"}
 	}
 	
 	policies_list = flatten ( [ for role in local.role_list : local.roles_def[role].policies ]  )
